@@ -1,6 +1,6 @@
 package com.example.danplab
 
 object Routes {
-    var screenA = "screen_A"
-    var screenB = "screen_B"
+    const val screenA = "screenA"
+    const val screenB = "screenB"
 }
