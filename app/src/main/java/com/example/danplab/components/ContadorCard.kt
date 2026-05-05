@@ -21,32 +21,22 @@ fun ContadorCard(
 ) {
 
     Card(
-        modifier = modifier
-            .height(150.dp),
+        modifier = modifier.height(150.dp),
         shape = RoundedCornerShape(16.dp)
     ) {
-
         Column(
+            modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-            modifier = Modifier.fillMaxSize()
+            verticalArrangement = Arrangement.Center
         ) {
 
             Text(titulo)
-
             Text(valor.toString(), fontSize = 28.sp)
 
             Row {
-
-                Button(onClick = onDecrement) {
-                    Text("-")
-                }
-
+                Button(onClick = onDecrement) { Text("-") }
                 Spacer(modifier = Modifier.width(10.dp))
-
-                Button(onClick = onIncrement) {
-                    Text("+")
-                }
+                Button(onClick = onIncrement) { Text("+") }
             }
         }
     }

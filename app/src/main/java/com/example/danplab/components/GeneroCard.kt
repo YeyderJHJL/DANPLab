@@ -21,22 +21,16 @@ fun GeneroCard(
     val color = if (seleccionado) Color(0xFF6A4FBF) else Color(0xFFE0E0E0)
 
     Card(
-        modifier = modifier
-            .height(100.dp),
+        modifier = modifier.height(100.dp),
         shape = RoundedCornerShape(16.dp),
         onClick = onClick,
         colors = CardDefaults.cardColors(containerColor = color)
     ) {
-
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier.fillMaxSize()
         ) {
-            Text(
-                texto,
-                fontSize = 18.sp,
-                color = Color.White
-            )
+            Text(texto, color = Color.White)
         }
     }
 }
